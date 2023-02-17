@@ -1,23 +1,66 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import { setupCounter } from './counter'
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+// scene
+const scene = new THREE.Scene();
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+// view port size
+const sizes = {
+	width: window.innerWidth,
+	height: window.innerHeight,
+};
+
+// resize
+window.addEventListener("resize", () => {
+	//window size
+	sizes.width = window.innerWidth;
+	sizes.height = window.innerHeight;
+
+	// camera
+	camera.aspect = sizes.width / sizes.height;
+	camera.updateProjectionMatrix();
+
+	//rendere
+	renderer.setSize(sizes.width, sizes.height);
+	renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+});
+
+// camera
+const camera = new THREE.PerspectiveCamera(
+	75,
+	sizes.width / sizes.width,
+	0.1,
+	1000
+);
+scene.add(camera);
+camera.position.set(0, 0, 2);
+
+// controls
+const controls = new OrbitControls(
+	camera,
+	document.querySelector(".webgl") as HTMLElement
+);
+controls.enableDamping = true;
+// objects
+const geometry = new THREE.BoxGeometry(1, 1, 1);
+const material = new THREE.MeshBasicMaterial({ color: "red" });
+const cube = new THREE.Mesh(geometry, material);
+cube.position.set(0, 0, 0);
+
+scene.add(cube);
+
+// renderer
+const renderer = new THREE.WebGLRenderer({
+	canvas: document.querySelector(".webgl") as HTMLCanvasElement,
+});
+renderer.setSize(sizes.width, sizes.height);
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+function animate() {
+	renderer.render(scene, camera);
+	requestAnimationFrame(animate);
+	controls.update();
+
+	camera.lookAt(cube.position);
+}
+animate();
