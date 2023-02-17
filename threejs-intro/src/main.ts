@@ -31,9 +31,9 @@ scene.add(camera);
 camera.position.set(0, 0, 10);
 
 // lights
-const ambientlight = new THREE.AmbientLight("#FFFFFF", 10); // soft white light
+const ambientlight = new THREE.AmbientLight("#FFFFFF", 5); // soft white light
 scene.add(ambientlight);
-const light = new THREE.DirectionalLight("#FFFFFF", 1);
+const light = new THREE.DirectionalLight("#FFFFFF", 10);
 light.position.set(1, 1, 10);
 scene.add(light);
 
