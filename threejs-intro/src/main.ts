@@ -1,6 +1,6 @@
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
-import { GLTF, GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
 // scene
 const scene = new THREE.Scene();
@@ -23,7 +23,7 @@ gltfLoader.load("./models/space_fighter/scene.gltf", (gltf) => {
 // camera
 const camera = new THREE.PerspectiveCamera(
 	75,
-	viewPort.width / viewPort.width,
+	viewPort.width / viewPort.height,
 	0.1,
 	1000
 );
