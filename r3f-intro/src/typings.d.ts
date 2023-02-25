@@ -1,4 +1,4 @@
-type DroneGLTF = GLTF & {
+export type DroneGLTF = GLTF & {
 	nodes: {
 		pCube43: THREE.Mesh;
 		pCube43_BlackGlass_0: THREE.Mesh;
