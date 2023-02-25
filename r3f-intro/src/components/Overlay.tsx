@@ -1,7 +1,12 @@
 import { store } from "../store";
 import { ColorPicker } from "./ColorPicker";
 
-export const Info = () => {
+export const Overlay = () => {
+	const handleBuy = () => {
+		alert(
+			"Congrats on buying a robot dog! Now you can finally experience the joys of pet ownership without any of the inconveniences of having to leave your house or make physical contact with another living being. Who needs a real dog when you can have a robot dog that doesn't shed, bark, or judge you for eating ice cream straight out of the tub? It's loneliness at its finest!"
+		);
+	};
 	return (
 		<section className="absolute top-[30%] left-32 z-50 hidden lg:block">
 			<h1 className="text-5xl font-bold text-black tracking-widest">
@@ -18,6 +23,12 @@ export const Info = () => {
 			</h1>
 			<ColorPicker dronePart={"Outer"} />
 			<ColorPicker dronePart={"Skeleton"} />
+			<button
+				onClick={handleBuy}
+				className="p-2 border rounded-lg w-full mt-4 hover:bg-black hover:text-white transition-colors duration-300"
+			>
+				Buy Now
+			</button>
 		</section>
 	);
 };

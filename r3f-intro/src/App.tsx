@@ -1,4 +1,4 @@
-import { Info } from "./components/Info";
+import { Overlay } from "./components/Overlay";
 import { MyCanvas } from "./components/MyCanvas";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
 					<MyCanvas />
 				</div>
 			</div> */}
-			<Info />
+			<Overlay />
 			<MyCanvas />
 		</div>
 	);
