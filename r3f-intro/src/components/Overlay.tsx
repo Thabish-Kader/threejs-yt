@@ -1,14 +1,15 @@
 import { store } from "../store";
 import { ColorPicker } from "./ColorPicker";
+import PopUp from "./Popup";
 
 export const Overlay = () => {
 	const handleBuy = () => {
 		alert(
-			"Congrats on buying a robot dog! Now you can finally experience the joys of pet ownership without any of the inconveniences of having to leave your house or make physical contact with another living being. Who needs a real dog when you can have a robot dog that doesn't shed, bark, or judge you for eating ice cream straight out of the tub? It's loneliness at its finest!"
+			"Congratulations to me on buying a robot dog! I can now proudly say that I have a pet that won't judge me for eating a whole pizza by myself on a Friday night. And if anyone tells me that having a robot dog is a sign of loneliness, I'll just tell them it's better than talking to my houseplants. At least the robot dog will respond with more than just a wilted leaf."
 		);
 	};
 	return (
-		<section className="absolute top-[30%] left-32 z-50 hidden lg:block">
+		<section className="absolute top-[30%] left-32 z-10 hidden lg:block">
 			<h1 className="text-5xl font-bold text-black tracking-widest">
 				thabishLabs .
 			</h1>
@@ -23,12 +24,13 @@ export const Overlay = () => {
 			</h1>
 			<ColorPicker dronePart={"Outer"} />
 			<ColorPicker dronePart={"Skeleton"} />
-			<button
+			{/* <button
 				onClick={handleBuy}
 				className="p-2 border rounded-lg w-full mt-4 hover:bg-black hover:text-white transition-colors duration-300"
 			>
 				Buy Now
-			</button>
+			</button> */}
+			<PopUp />
 		</section>
 	);
 };
