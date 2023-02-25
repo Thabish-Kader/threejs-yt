@@ -15,8 +15,13 @@
 
 Why should I buy a robot dog, you ask? Well, it's simple: I'm tired of being a lone wolf and I figured I could use a companion who doesn't judge me for binge-watching Netflix all day. Plus, with a robot dog, I can finally say I have a "fetch" buddy.
 
+<img width="1680" alt="Screenshot 2023-02-25 at 12 08 27 PM" src="https://user-images.githubusercontent.com/76642519/221346587-2e8b666a-fcc5-4ae8-bcd1-eb3ae3d0761f.png">
+
 # Skills
 
 -   React three fiber
 -   Three js
 -   Valito
+
+## Resources
+- [Model](https://sketchfab.com/3d-models/robot-cln-r-school-project-9a793a9293fb4ec89936aebfda8fc434)
