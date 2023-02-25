@@ -15,7 +15,7 @@
 
 Why should I buy a robot dog, you ask? Well, it's simple: I'm tired of being a lone wolf and I figured I could use a companion who doesn't judge me for binge-watching Netflix all day. Plus, with a robot dog, I can finally say I have a "fetch" buddy.
 
-<img width="1680" alt="Screenshot 2023-02-25 at 12 08 27 PM" src="https://user-images.githubusercontent.com/76642519/221346587-2e8b666a-fcc5-4ae8-bcd1-eb3ae3d0761f.png">
+<img width="1680" alt="Screenshot 2023-02-25 at 12 43 10 PM" src="https://user-images.githubusercontent.com/76642519/221347857-06c916da-2543-400d-b860-0ef8049ed46b.png">
 
 # Skills
 
