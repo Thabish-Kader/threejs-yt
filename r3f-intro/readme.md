@@ -1,4 +1,4 @@
-# Robot Dog
+# Get Started with React-3-Fiber
 
 # React-3-Fiber, Typescript, Three js, React
 
@@ -24,4 +24,5 @@ Why should I buy a robot dog, you ask? Well, it's simple: I'm tired of being a l
 -   Valito
 
 ## Resources
-- [Model](https://sketchfab.com/3d-models/robot-cln-r-school-project-9a793a9293fb4ec89936aebfda8fc434)
+
+-   [Model](https://sketchfab.com/3d-models/robot-cln-r-school-project-9a793a9293fb4ec89936aebfda8fc434)
